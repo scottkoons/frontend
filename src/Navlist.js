@@ -1,12 +1,11 @@
 import React from 'react';
-//import {NavLink} from 'react-router-dom';
-import {Navbar, NavbarBrand, NavItem, NavLink, Nav} from 'reactstrap';
+import { Navbar, NavbarBrand, NavItem, NavLink, Nav } from 'reactstrap';
 
-function Navlist({username}){
+function Navlist({ username }) {
     return (
-        <Navbar color='info' className='Nav'>
+        <Navbar color='light' className='Nav'>
             <NavbarBrand href='/'>Jobly</NavbarBrand>
-            {username ? 
+            {username ?
                 <Nav>
                     <NavItem>
                         <NavLink href='/companies'>Companies</NavLink>
@@ -21,7 +20,7 @@ function Navlist({username}){
                         <NavLink href='/logout'>Log Out</NavLink>
                     </NavItem>
                 </Nav>
-            :
+                :
                 <Nav>
                     <NavItem>
                         <NavLink href='/signup'>Register</NavLink>
@@ -32,7 +31,7 @@ function Navlist({username}){
                 </Nav>
             }
         </Navbar>
-    )
+    );
 }
 
 export default Navlist;
